@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktik Javascript</title>
+    <link rel="shortcut icon" href="https://i.pinimg.com/564x/73/62/8e/73628eb2b6c9e47205efd9d909593d27.jpg">
+</head>
+<style>
+
+    h1{
+        text-align: center;
+    }
+    table, th, td{
+        border-collapse: collapse;
+        border: 2px solid black;
+        padding: 20px;
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        
+
+    }
+    tr:hover{
+        background-color: aqua;
+    }
+    
+</style>
+<body>
+    <h1>Praktek HTML dan Javascript</h1>
+
+    <table>
+        <tr style="background-color:aquamarine;">
+            <th>No.</th>
+            <th>Nama</th>
+            <th>Score Game</th>
+             
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Aldi</td>
+            <td><span id="Aldi"></span></td>
+            
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Fadli</td>
+            <td><span id="Fadli"></span></td>
+            
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Rudi</td>
+            <td><span id="Rudi"></span></td>
+            
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td id="a">Yanto</td>
+            <td><span id="Yanto"></span></td>
+            
+        </tr>
+
+        <tr>
+            <td colspan="2">Total Nilai</td>
+            <td id="b"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2">Nilai Rata Rata</td>
+            <td id="c"></td>
+
+        </tr>
+        
+       </table>
+
+       <script>
+        var nilai = {
+            Aldi: 96,
+            Fadli: 98,
+            Rudi: 97,
+            Yanto: 97,
+        }
+
+        var total= nilai.Aldi + nilai.Fadli + nilai.Rudi + nilai.Yanto;
+        var rata= total/4;
+
+        document.getElementById("Aldi").innerHTML=nilai.Aldi
+        document.getElementById("Fadli").innerHTML=nilai.Fadli
+        document.getElementById("Rudi").innerHTML=nilai.Rudi
+        document.getElementById("Yanto").innerHTML=nilai.Yanto
+        document.getElementById("b").innerHTML=total
+        document.getElementById("c").innerHTML=rata
+
+
+       </script>
+
+       <br>
+       <table>
+        <tr style="background-color: aquamarine;">
+            <td>Kesimpulan</td>
+        </tr>
+
+        <tr>
+            <td id="1"></td>
+        </tr>
+
+        <tr>
+            <td id="2"></td>
+        </tr>
+
+        <tr>
+            <td id="3"></td>
+        </tr>
+       </table>
+
+       <script>
+        let Aldi=96;
+        let Fadli=98;
+        let Rudi =97;
+        let Yanto =97;
+        let hasil;
+
+        if(Rudi==Yanto){
+            hasil="Nilai Rudi dan Yanto sama"
+        }else{
+            hasil="Nilai Rudi dan Yanto tidak sama"
+        }
+        document.getElementById("1").innerHTML = hasil;
+
+        if(Fadli>Aldi){
+            hasil="Nilai Fadli lebih besar daripada Aldi"
+        }else{
+            hasil="Nilai Fadli lebih kecil daripada Aldi "
+        }
+        document.getElementById("2").innerHTML = hasil;
+
+        if(Fadli >= 97&&Rudi >=97&&Yanto >=97){
+            hasil="Fadli,Rudi dan Yanto lolos ke babak selanjutnya"
+        }else{
+            hasil="Fadli,Rudi dan Yanto tidak lolos ke babak selanjutnya"
+        }
+        document.getElementById("3").innerHTML = hasil;
+
+       </script>
+      
+</body>
+</html>
